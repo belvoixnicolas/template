@@ -1,0 +1,407 @@
+@import "reset.css";
+
+body {
+    background: #F3F3F3;
+}
+
+header {
+    height: 90vh;
+    box-shadow: inset 0 0 100px 0 #000;
+}
+
+.owl-stage-outer {
+    overflow: hidden;
+}
+
+#carousel {
+    text-align: center;
+    z-index: -10;
+}
+
+#carousel img {
+    height: 90vh;
+}
+
+nav {
+    background: #000;
+    padding: 1vh 20px;
+    height: 10vh;
+    text-align: right;
+}
+
+nav a, nav ul, nav ul li, nav button {
+    display: inline-block;
+}
+
+.left {
+    float: left;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #F3F3F3;
+    font-size: 2.5rem;
+}
+
+nav img {
+    height: 8vh; 
+}
+
+nav li {
+    line-height: 8vh;
+    margin: 0 10px;
+}
+
+nav button {
+    border: 2px solid #E80041;
+    background: none;
+    color: #E80041;
+    margin-left: 10px;
+    font-size: 2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+nav button:hover {
+    background: #E80041;
+    color: #F3F3F3;
+}
+
+main {
+    height: 84vh;
+    display: grid;
+    grid-template-columns: repeat(4, 25%); 
+    grid-template-rows: 100%; 
+}
+
+section {
+    position: relative;
+}
+
+section div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+section div img, section div h2 {
+    margin-bottom: 10%;
+    letter-spacing: 5px;
+}
+
+section div p {
+    font-size: 1.5rem;
+}
+
+section div h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+section div a {
+    border: 2px solid #E80041;
+    background: none;
+    color: #E80041;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+section div a:hover {
+    background: #E80041;
+    color: #F3F3F3;
+}
+
+section:nth-child(1) {
+    background: url('../images/photo2.jpg') center left 65% no-repeat;
+    background-size: cover;
+    color: #F3F3F3;
+}
+
+section:nth-child(1) div {
+    background: #00000080;
+    transition: 1s;
+}
+
+section:nth-child(1) div:hover {
+    background: #000000e6;
+}
+
+section:nth-child(2) {
+    background: url('../images/photo1.jpg') center left 25% no-repeat;
+    background-size: cover;
+    color: #f3f3f3;
+}
+
+section:nth-child(2) div {
+    background: #35345a80;
+    transition: 1s;
+}
+
+section:nth-child(2) div:hover {
+    background: #35345ae6;
+}
+
+section:nth-child(3) {
+    background: url('../images/photo3.jpg') center no-repeat;
+    background-size: cover;
+}
+
+section:nth-child(3) div {
+    background: #f2f2f280;
+    transition: 1s;
+}
+
+section:nth-child(3) div:hover {
+    background: #f2f2f2e6;
+}
+
+section:nth-child(4) {
+    background: url('../images/photo4.jpg') center no-repeat;
+    background-size: cover;
+}
+
+section:nth-child(4) div {
+    background: #e2e1d480;
+    transition: 1s;
+}
+
+section:nth-child(4) div:hover {
+    background: #e2e1d4e6;
+}
+
+section:nth-child(1) div img, section:nth-child(2) div img {
+    filter: invert(100%);
+}
+
+footer {
+    background: #000;
+    height: 6vh;
+    text-align: center;
+    color: #F3F3F3;
+    font-size: 1.5rem;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer button {
+    border: 2px solid #00000000;
+    background: none;
+    color: #F3F3F3;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+footer button:hover {
+    border: 2px solid #E80041;
+    background: none;
+    color: #E80041;
+    cursor: pointer;
+}
+
+footer button:active {
+    background: #E80041;
+    color: #F3F3F3;
+}
+
+footer p {
+    line-height: 5vh;
+}
+
+#resaux {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    background: #F3F3F3;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #E3E2D5;
+}
+
+#resaux img {
+    margin: 10px 0;
+    height: 40px;
+}
+
+#contact {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    bottom: 0;
+    right: 10%;
+    width: 30%;
+}
+
+#contact img {
+    justify-self: end;
+    background: #F3F3F3;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    border-style: solid solid none;
+    border-width: 2px 2px 0;
+    border-color: #E3E2D5;
+}
+
+#contact form {
+    background: #F3F3F3;
+    border-radius: 5px 0 0 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, calc(25% - 5px));
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 5px;
+}
+
+form input, form textarea {
+    background: #E3E2D5;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid #00000023;
+    padding-left: 30px;
+}
+
+input[name=nom] {
+    grid-column: 1 / 2 span;
+}
+
+input[name=prenom] {
+    grid-column: 3 / 2 span;
+}
+
+input[name=tel] {
+    grid-column: 3 / 2 span;
+    grid-row-start: 2;
+}
+
+input[name=mail] {
+    grid-column: 1 / 2 span;
+}
+
+form textarea {
+    grid-column: 1 / 4 span;
+    height: 100px;
+    padding-top: 10px; 
+}
+
+input[type=submit] {
+    grid-column: 2 / 2 span;
+    border: 2px solid #E80041;
+    background: none;
+    color: #E80041;
+    font-size: 2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: auto!important;
+    transition: .5s;
+}
+
+input[type=submit]:hover {
+    background: #E80041;
+    color: #F3F3F3;
+}
+
+@media all and (max-width: 768px) {
+    nav li a {
+        font-size: 2rem;
+    }
+
+    nav button {
+        font-size: 1.5rem;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 50%); 
+        grid-template-rows: repeat(2, 50%); 
+    }
+
+    section div img, section div h2 {
+        margin-bottom: 5%;
+        letter-spacing: 0px;
+    }
+
+    #resaux img {
+        height: 30px;
+    }
+
+    input[type=submit] {
+        grid-column: 1 / 4 span;
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (max-width: 775px) {
+    #contact {
+        right: 18%;
+        width: 50%;
+    } 
+}
+
+@media all and (max-width: 566px) {
+    nav ul li {
+        margin: 0 1px;
+    }
+
+    nav button {
+        margin-left: 2px;
+        padding: 5px 5px;
+    }
+
+    nav {
+        padding: 1vh 5px;
+        height: 11vh;
+    }   
+}
+
+@media all and (max-width: 547px) {
+    footer {
+        font-size: 1rem;
+    }
+    
+    footer button {
+        font-size: 1rem;
+    }
+
+    #contact {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        width: 80%;
+    }
+    
+    #contact img {
+        height: 50px;
+    }
+}
+
+@media all and (max-width: 432px) {
+    nav {
+        height: 20vh;
+    }
+
+    nav ul {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: 5px;
+    }
+
+    nav img {
+        height: 8vh; 
+        margin: 5vh 0;
+    }
+
+    nav button {
+        position: relative;
+        top: 24%;
+    }
+}
